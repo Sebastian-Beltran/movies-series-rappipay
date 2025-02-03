@@ -15,29 +15,27 @@ class MoviesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Swiper(
       itemBuilder: (BuildContext context, int index) {
-        return Builder(builder: (context) {
-          return GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(
-                context,
-                'movie-detail',
-                arguments: MovieDetailArgs(movie: movies[index]),
-              );
-            },
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.network(
-                'https://images.tmdb.org/t/p/w1280/${movies[index].poster_path}',
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) {
-                  return const Center(
-                    child: Icon(Icons.error),
-                  );
-                },
-              ),
+        return GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(
+              context,
+              'movie-detail',
+              arguments: MovieDetailArgs(movie: movies[index]),
+            );
+          },
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image.network(
+              'https://images.tmdb.org/t/p/w1280/${movies[index].poster_path}',
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) {
+                return const Center(
+                  child: Icon(Icons.error),
+                );
+              },
             ),
-          );
-        });
+          ),
+        );
       },
       pagination: SwiperPagination(
         margin: EdgeInsets.only(top: 270),
