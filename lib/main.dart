@@ -5,6 +5,7 @@ import 'dart:async';
 import 'package:equatable/equatable.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_series_app/core/constants/palette.dart';
 import 'package:movies_series_app/presentation/screens/home_screen.dart';
@@ -12,6 +13,7 @@ import 'package:movies_series_app/router.dart';
 
 Future<void> main() async {
   runZonedGuarded<void>(() async {
+    await dotenv.load(fileName: ".env");
     final router = FluroRouter();
     RouterFluro().setupRouter(router);
     EquatableConfig.stringify = true;

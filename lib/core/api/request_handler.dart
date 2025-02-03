@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
@@ -41,6 +42,6 @@ class RequestHandlerImpl extends RequestHandler {
   final headers = <String, String>{
     'Content-type': 'application/json; charset=UTF-8',
     'accept': 'application/json',
-    'Authorization': 'Bearer '
+    'Authorization': 'Bearer ${dotenv.env['BEARER_TOKEN']}'
   };
 }
