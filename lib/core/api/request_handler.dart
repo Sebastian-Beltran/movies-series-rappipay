@@ -41,7 +41,6 @@ class RequestHandlerImpl extends RequestHandler {
   final headers = <String, String>{
     'Content-type': 'application/json; charset=UTF-8',
     'accept': 'application/json',
-    'Authorization':
-        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhN2NmYWQzNGY2ODQ2OGQ1ODYwZWE1MWFkNzYzMjIyZiIsIm5iZiI6MTczODM2NTQ2Mi4xMDMwMDAyLCJzdWIiOiI2NzlkNWExNjBkMTlmMzBhYzE5NTJhOTUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.x8gxZSaJo185j9foKel-bv2BP7lDrwF-6E0xJS8J4l0'
+    'Authorization': 'Bearer '
   };
 }
