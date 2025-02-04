@@ -84,13 +84,23 @@ class CardDetailSerie extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  serie.overview,
-                  style: TextStyle(
-                    color: Palette.primary,
-                    fontSize: 14,
-                  ),
-                ),
+                serie.overview != ''
+                    ? Text(
+                        serie.overview,
+                        style: TextStyle(
+                          color: Palette.primary,
+                          fontSize: 14,
+                        ),
+                      )
+                    : Center(
+                        child: Text(
+                          'Description not available',
+                          style: TextStyle(
+                            color: Palette.primary,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
               ],
             ),
             const SizedBox(height: 20),

@@ -8,6 +8,8 @@ El proyecto se compone principalmente por 2 features principales:
 - Movies (Peliculas): Lista las peliculas mas populares y mejores rankeadas.
 - Series (Series): Lista las series de TV mas populares y mejores rankeadas.
 
+## App
+![Arquitectura](assets/movies-series-app.mov)
 
 ## Arquitectura
 Arquitectura utilizada en el app:

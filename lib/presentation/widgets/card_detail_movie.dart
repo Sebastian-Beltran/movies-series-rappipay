@@ -84,13 +84,23 @@ class CardDetailMovie extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  movie.overview,
-                  style: TextStyle(
-                    color: Palette.primary,
-                    fontSize: 14,
-                  ),
-                ),
+                movie.overview != ''
+                    ? Text(
+                        movie.overview,
+                        style: TextStyle(
+                          color: Palette.primary,
+                          fontSize: 14,
+                        ),
+                      )
+                    : Center(
+                        child: Text(
+                          'Description not available',
+                          style: TextStyle(
+                            color: Palette.primary,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
               ],
             ),
             const SizedBox(height: 20),
