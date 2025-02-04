@@ -12,7 +12,7 @@ El proyecto se compone principalmente por 2 features principales:
 ## Arquitectura
 Arquitectura utilizada en el app:
 
-![Arquitectura](assets/architecture.png)
+![Arquitectura](assets/Architecture.png)
 
 ## Instalación
 Para la instalación del proyecto debemos tener en cuenta las versiones de [Flutter](https://flutter.dev/), para este proyecto se utilizo Flutter 3.27.3 y Dart 3.6.1.
