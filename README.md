@@ -8,6 +8,9 @@ El proyecto se compone principalmente por 2 features principales:
 - Movies (Peliculas): Lista las peliculas mas populares y mejores rankeadas.
 - Series (Series): Lista las series de TV mas populares y mejores rankeadas.
 
+## Testing
+En el app se agregan los test utilizando Mockito para Mockear el RequestHandler y testear mis services, para poder correr los test se utiliza Build runner para poder generar los mocks.
+
 ## App
 ![App](assets/app.gif)
 
@@ -38,7 +41,7 @@ Instalar dependencias:
 flutter pub get
 ```
 
-Importante tambien generar los modelos con el comando:
+Importante tambien generar los modelos y mocks con el comando:
 
 ```sh
 dart run build_runner build —delete-conflicting-outputs
